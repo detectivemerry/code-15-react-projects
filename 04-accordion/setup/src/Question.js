@@ -8,7 +8,9 @@ const Question = ({title, info}) => {
     <div className = 'question'>
       <header>
       <h4>{title}</h4>
-      <button className = 'btn' onClick = {()=>{setReadMore(!readMore)}}><AiOutlineMinus /></button>
+      <button className = 'btn' onClick = {()=>{setReadMore(!readMore)}}>
+        {readMore?<AiOutlineMinus />: <AiOutlinePlus />}
+        </button>
       </header>
       
       {readMore?info : ''}
